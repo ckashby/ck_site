@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 CK Blog Landing Page
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
+
+{% block scripts %}
 {% endblock %}
 
 {% block content %}
