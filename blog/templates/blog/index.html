@@ -25,19 +25,7 @@ CK Blog Landing Page
     <h2>My Latest Thoughts...</h2>
 
     <ul>
-        <li>
-            <article class="post">
-                <a href="">
-                    <div class="post__content">
-                        <img src="{% static 'blog/images/mountains.jpg' %}" alt="Mountain Hiking" />
-                        <h3>Mountain Hiking</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, voluptas earum. Doloribus
-                            fuga inventore possimus eos. Doloremque maxime, animi beatae et inventore quis dolor eius
-                            explicabo? Molestias, a quo! Ullam, ea labore? Sequi, libero sunt!...</p>
-                    </div>
-                </a>
-            </article>
-        </li>
+        {% include 'blog/includes/post.html' %}
     </ul>
 
 </section>
