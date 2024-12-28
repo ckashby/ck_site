@@ -7,7 +7,7 @@ def index(request):
     return render(request, 'blog/index.html')
 
 def posts(request):
-    return HttpResponse("Hello, world. You're at the blog posts.")
+    return render(request, 'blog/posts.html')
 
 def post_details(request, slug):
     return HttpResponse(f"Hello, world. You're at the blog post {slug}.")
