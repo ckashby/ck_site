@@ -26,8 +26,11 @@ CK Blog Landing Page
     <h2>My Latest Thoughts...</h2>
 
     <ul>
-        {% include 'blog/includes/post.html' %}
-        {% include 'blog/includes/post.html' %}
+        {% for post in posts %}
+        <li>
+            {% include 'blog/includes/post.html' %}
+        </li>
+        {% endfor %}
     </ul>
 
 </section>
