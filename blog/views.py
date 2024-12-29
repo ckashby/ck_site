@@ -90,4 +90,7 @@ def posts(request):
 
 def post_details(request, slug):
     # return HttpResponse(f"Hello, world. You're at the blog post {slug}.")
-    return render(request, 'blog/post-detail.html')
+    post = next(post for post in all_posts if post['slug'] == slug)
+    return render(request, 'blog/post-detail.html', {
+        'post': post
+    })
