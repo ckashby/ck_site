@@ -16,7 +16,7 @@ CK Blog Landing Page
 <section id="welcome">
     <header>
         <img src="{% static 'blog/images/cka.jpg' %}" alt="Welcome to CK Blog" />
-        <h1>CK's Blog</h1>
+        <h2>CK's Blog</h2>
     </header>
     <p>This is the awesome landing page for the blog.</p>
 </section>
@@ -25,6 +25,7 @@ CK Blog Landing Page
     <h2>My Latest Thoughts...</h2>
 
     <ul>
+        {% include 'blog/includes/post.html' %}
         {% include 'blog/includes/post.html' %}
     </ul>
 
