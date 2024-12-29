@@ -83,7 +83,9 @@ def index(request):
 
 
 def posts(request):
-    return render(request, 'blog/all-posts.html')
+    return render(request, 'blog/all-posts.html', {
+        'posts': all_posts
+    })
 
 
 def post_details(request, slug):
