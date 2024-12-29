@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+This Post Title <!-- {{ post.title }} -->
+{% endblock %}
+
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'blog/post.css' %}">
+<link rel="stylesheet" href="{% static 'blog/all-posts.css' %}">
+{% endblock %}
+
+{% block content %}
+<section id="summary">
+    <h2>Post Title</h2>
+    <article>
+        <img src="{% static 'blog/images/mountains.jpg' %}" alt="Post Title" />
+        <address>By CK Ashby</address>
+        <div>
+            Last updated: <time>January 14th 2025</time>
+        </div>
+    </article>
+    <main>
+        <p>Post Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolores tempora est possimus
+            voluptates, error exercitationem quo vero hic expedita fuga, recusandae fugit explicabo. Similique sequi,
+            quasi consequatur voluptas fugiat alias aperiam quis ipsam accusamus?</p>
+        <p>Post Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolores tempora est possimus
+            voluptates, error exercitationem quo vero hic expedita fuga, recusandae fugit explicabo. Similique sequi,
+            quasi consequatur voluptas fugiat alias aperiam quis ipsam accusamus?</p>
+        <p>Post Content Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolores tempora est possimus
+            voluptates, error exercitationem quo vero hic expedita fuga, recusandae fugit explicabo. Similique sequi,
+            quasi consequatur voluptas fugiat alias aperiam quis ipsam accusamus?</p>
+    </main>
+</section>
+{% endblock %}
