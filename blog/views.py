@@ -12,4 +12,4 @@ def posts(request):
 
 def post_details(request, slug):
     # return HttpResponse(f"Hello, world. You're at the blog post {slug}.")
-    return render(request, 'blog/post-detail-page.html')
+    return render(request, 'blog/post-detail.html')
