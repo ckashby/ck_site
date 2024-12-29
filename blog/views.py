@@ -84,7 +84,7 @@ def index(request):
 
 def posts(request):
     return render(request, 'blog/all-posts.html', {
-        'posts': all_posts
+        'all_posts': all_posts
     })
 
 
