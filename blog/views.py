@@ -2,7 +2,7 @@ from datetime import date
 from django.shortcuts import render
 from django.http import HttpResponse
 
-posts = [
+all_posts = [
     {
         "slug": "hike-in-the-mountains",
         "image": "mountains.jpg",
@@ -69,8 +69,17 @@ posts = [
 ]
 
 
+def get_date(post):
+    return post['date']  # get the date of a post
+
+
 def index(request):
-    return render(request, 'blog/index.html')
+    sorted_posts = sorted(all_posts, key=get_date)
+    latest_posts = sorted_posts[-3:]
+    # return a render of the request, the template 'blog/index.html' and the context (dict) of latest_posts
+    return render(request, 'blog/index.html', {
+        'posts': latest_posts
+    })
 
 
 def posts(request):
