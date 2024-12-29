@@ -17,8 +17,6 @@ All Posts Page
         {% for  post in all_posts %}
 
         <li>
-            <!-- <h2>{{ post.title }}</h2>
-            <p>{{ post.excerpt }}</p> -->
             {% include 'blog/includes/post.html' with post=post %}
         </li>
         
